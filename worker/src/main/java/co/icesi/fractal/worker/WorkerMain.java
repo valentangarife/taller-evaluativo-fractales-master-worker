@@ -7,7 +7,7 @@ import java.util.concurrent.*;
 
 /**
  * Punto de entrada del Nodo Trabajador (Worker).
- * 
+ *
  * Flujo:
  * 1. Inicializa su propio ObjectAdapter para exponer WorkerObserver.
  * 2. Se registra en el Master pasando su proxy WorkerObserver.
@@ -23,17 +23,19 @@ public class WorkerMain {
     private final String masterHost;
     private final int masterPort;
     private final int threadsCount;
+    private final String workerHost; // IP con la que el Maestro puede llamar a este worker
 
     private Communicator communicator;
     private MasterServicePrx master;
     private ExecutorService executor;
 
-    public WorkerMain(String workerId, int workerPort, String masterHost, int masterPort, int threadsCount) {
+    public WorkerMain(String workerId, int workerPort, String masterHost, int masterPort, int threadsCount, String workerHost) {
         this.workerId = workerId;
         this.workerPort = workerPort;
         this.masterHost = masterHost;
         this.masterPort = masterPort;
         this.threadsCount = Math.max(1, threadsCount);
+        this.workerHost = workerHost;
     }
 
     public void start(String[] args) {
@@ -65,7 +67,7 @@ public class WorkerMain {
             }
 
             // 3. Registrarse en el Master pasando el proxy con endpoint explicito
-            String observerEndpoint = String.format("WorkerObserver:tcp -h 127.0.0.1 -p %d", workerPort);
+            String observerEndpoint = String.format("WorkerObserver:tcp -h %s -p %d", workerHost, workerPort);
             WorkerObserverPrx observer = WorkerObserverPrx.checkedCast(communicator.stringToProxy(observerEndpoint));
             master.registerWorker(workerId, observer);
 
@@ -103,7 +105,7 @@ public class WorkerMain {
      */
     public void onTasksAvailable(String jobId) {
         System.out.printf("[%s] [EVENTO] Tareas disponibles para el trabajo '%s'. Despertando %d hilos de computo...%n",
-            workerId, jobId, threadsCount);
+                workerId, jobId, threadsCount);
 
         for (int i = 0; i < threadsCount; i++) {
             final int threadId = i + 1;
@@ -130,22 +132,22 @@ public class WorkerMain {
 
                     // REPORTAR: Enviar el resultado parcial al Master
                     TileResult result = new TileResult(
-                        task.jobId,
-                        task.taskId,
-                        task.startX,
-                        task.startY,
-                        task.tileWidth,
-                        task.tileHeight,
-                        pixels,
-                        computeTimeMs,
-                        workerId
+                            task.jobId,
+                            task.taskId,
+                            task.startX,
+                            task.startY,
+                            task.tileWidth,
+                            task.tileHeight,
+                            pixels,
+                            computeTimeMs,
+                            workerId
                     );
 
                     try {
                         master.reportResult(result);
                     } catch (java.lang.Exception e) {
                         System.err.printf("[%s-H%d] Error al reportar resultado de tarea #%d: %s%n",
-                            workerId, threadId, task.taskId, e.getMessage());
+                                workerId, threadId, task.taskId, e.getMessage());
                         break;
                     }
                 }
@@ -160,7 +162,10 @@ public class WorkerMain {
         int masterPort = (args.length >= 4) ? Integer.parseInt(args[3]) : 10000;
         int threads = (args.length >= 5) ? Integer.parseInt(args[4]) : Runtime.getRuntime().availableProcessors();
 
-        WorkerMain worker = new WorkerMain(workerId, workerPort, masterHost, masterPort, threads);
+        // Sexto argumento opcional: IP de ESTE worker (por ejemplo la de ZeroTier)
+        String workerHost = (args.length >= 6) ? args[5] : "127.0.0.1";
+
+        WorkerMain worker = new WorkerMain(workerId, workerPort, masterHost, masterPort, threads, workerHost);
         worker.start(args);
     }
 }
