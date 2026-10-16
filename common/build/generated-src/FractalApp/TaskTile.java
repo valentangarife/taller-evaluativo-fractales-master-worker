@@ -273,5 +273,5 @@ public class TaskTile implements java.lang.Cloneable,
     private static final TaskTile _nullMarshalValue = new TaskTile();
 
     /** @hidden */
-    public static final long serialVersionUID = -1128699024L;
+    public static final long serialVersionUID = -7309287036086031504L;
 }

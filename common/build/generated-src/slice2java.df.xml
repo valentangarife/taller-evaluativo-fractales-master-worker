@@ -1,20 +1,20 @@
 <state>
-  <timestamp value='1792125348923' />
+  <timestamp value='1792154104757' />
   <sourceSet name='default'>
-    <source name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\src\main\slice\FractalCompute.ice'>
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\RenderConfig.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\TaskTile.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\TileResult.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\FractalException.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\WorkerObserver.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\MasterService.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\IterationMatrixHelper.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\WorkerObserverPrx.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\_WorkerObserverPrxI.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\MasterServicePrx.java' />
-      <file name='D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\common\build\generated-src\FractalApp\_MasterServicePrxI.java' />
+    <source name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/src/main/slice/FractalCompute.ice'>
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/RenderConfig.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/TaskTile.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/TileResult.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/FractalException.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/WorkerObserver.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/MasterService.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/IterationMatrixHelper.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/WorkerObserverPrx.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/_WorkerObserverPrxI.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/MasterServicePrx.java' />
+      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-evaluativo-fractales-master-worker/common/build/generated-src/FractalApp/_MasterServicePrxI.java' />
     </source>
-    <arg value='C:\Program Files\ZeroC\Ice-3.7.11\\bin\slice2java.exe' />
-    <arg value='-IC:\Program Files\ZeroC\Ice-3.7.11\\slice' />
+    <arg value='/opt/homebrew/bin/slice2java' />
+    <arg value='-I/opt/homebrew/share/ice/slice' />
   </sourceSet>
 </state>
