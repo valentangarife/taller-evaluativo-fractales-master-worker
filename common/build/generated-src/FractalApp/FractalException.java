@@ -65,5 +65,5 @@ public class FractalException extends com.zeroc.Ice.UserException
     }
 
     /** @hidden */
-    public static final long serialVersionUID = 1799448666517046174L;
+    public static final long serialVersionUID = 1061979038L;
 }

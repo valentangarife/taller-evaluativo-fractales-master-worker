@@ -227,5 +227,5 @@ public class TileResult implements java.lang.Cloneable,
     private static final TileResult _nullMarshalValue = new TileResult();
 
     /** @hidden */
-    public static final long serialVersionUID = -1359751937342018029L;
+    public static final long serialVersionUID = 940862995L;
 }

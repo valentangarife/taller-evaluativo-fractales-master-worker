@@ -233,5 +233,5 @@ public class RenderConfig implements java.lang.Cloneable,
     private static final RenderConfig _nullMarshalValue = new RenderConfig();
 
     /** @hidden */
-    public static final long serialVersionUID = -6687292002425659279L;
+    public static final long serialVersionUID = -971267983L;
 }

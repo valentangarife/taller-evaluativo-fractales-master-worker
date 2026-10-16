@@ -1,0 +1,210 @@
+﻿=== c1: seahorse 1920x1080 20000 iter, p=2 ===
+> Task :common:compileSlice
+> Task :common:compileJava UP-TO-DATE
+> Task :client:compileJava UP-TO-DATE
+> Task :client:processResources NO-SOURCE
+> Task :client:classes UP-TO-DATE
+> Task :common:processResources NO-SOURCE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar UP-TO-DATE
+
+> Task :client:runClient
+=================================================
+         CLIENTE DE BENCHMARK FRACTAL
+=================================================
+Conectado a Master:    MasterService:tcp -h 10.243.132.174 -p 10000
+Workers en el cl·ster: 2 nodo(s) activo(s)
+Preset / Regi¾n:       Valle de los Caballitos de Mar (Seahorse Valley) (seahorse)
+Dimensiones imagen:    1920x1080 (2073600 px)
+Plano Complejo:        X=[-0,750000, -0,732222], Y=[0,090000, 0,100000]
+Max. Iteraciones:      20000
+Estrategia elegida:    FixedTileSize (Baldosas) (Parametro = 64)
+
+[1/3] Ejecutando lÝnea base monohilo local (T_sec)...
+[LINEA BASE] Tiempo Secuencial (T_sec): 151412 ms (151,41 s)
+
+[2/3] Solicitando renderizado distribuido al cl·ster Master-Worker...
+
+[3/3] Validando integridad de los datos calculados...
+[VERIFICACION OK] El resultado distribuido es 100% idÚntico al secuencial.
+
+=================================================
+              RESULTADOS DEL BENCHMARK
+=================================================
+Tiempo Monolito (T_sec):      151412 ms (151,41 s)
+Tiempo Cl·ster (T_dist):      13909 ms (13,91 s)
+Aceleraci¾n (Speedup S):      10,89x
+Eficiencia Paralela (E):      544,3%
+=================================================
+[MandelbrotCore] Imagen guardada satisfactoriamente en: D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\client\output\c1.png
+
+BUILD SUCCESSFUL in 2m 49s
+5 actionable tasks: 2 executed, 3 up-to-date
+=== c2: seahorse 3840x2160 10000 iter, p=2 ===
+> Task :common:compileSlice
+> Task :common:compileJava UP-TO-DATE
+> Task :client:compileJava UP-TO-DATE
+> Task :client:processResources NO-SOURCE
+> Task :client:classes UP-TO-DATE
+> Task :common:processResources NO-SOURCE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar UP-TO-DATE
+
+> Task :client:runClient
+=================================================
+         CLIENTE DE BENCHMARK FRACTAL
+=================================================
+Conectado a Master:    MasterService:tcp -h 10.243.132.174 -p 10000
+Workers en el cl·ster: 2 nodo(s) activo(s)
+Preset / Regi¾n:       Valle de los Caballitos de Mar (Seahorse Valley) (seahorse)
+Dimensiones imagen:    3840x2160 (8294400 px)
+Plano Complejo:        X=[-0,750000, -0,732222], Y=[0,090000, 0,100000]
+Max. Iteraciones:      10000
+Estrategia elegida:    FixedTileSize (Baldosas) (Parametro = 64)
+
+[1/3] Ejecutando lÝnea base monohilo local (T_sec)...
+[LINEA BASE] Tiempo Secuencial (T_sec): 306721 ms (306,72 s)
+
+[2/3] Solicitando renderizado distribuido al cl·ster Master-Worker...
+
+[3/3] Validando integridad de los datos calculados...
+[VERIFICACION OK] El resultado distribuido es 100% idÚntico al secuencial.
+
+=================================================
+              RESULTADOS DEL BENCHMARK
+=================================================
+Tiempo Monolito (T_sec):      306721 ms (306,72 s)
+Tiempo Cl·ster (T_dist):      28448 ms (28,45 s)
+Aceleraci¾n (Speedup S):      10,78x
+Eficiencia Paralela (E):      539,1%
+=================================================
+[MandelbrotCore] Imagen guardada satisfactoriamente en: D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\client\output\c2.png
+
+BUILD SUCCESSFUL in 5m 40s
+5 actionable tasks: 2 executed, 3 up-to-date
+=== c3: seahorse 3840x2160 20000 iter, p=2 ===
+> Task :common:compileSlice
+> Task :common:compileJava UP-TO-DATE
+> Task :client:compileJava UP-TO-DATE
+> Task :client:processResources NO-SOURCE
+> Task :client:classes UP-TO-DATE
+> Task :common:processResources NO-SOURCE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar UP-TO-DATE
+
+> Task :client:runClient
+=================================================
+         CLIENTE DE BENCHMARK FRACTAL
+=================================================
+Conectado a Master:    MasterService:tcp -h 10.243.132.174 -p 10000
+Workers en el cl·ster: 2 nodo(s) activo(s)
+Preset / Regi¾n:       Valle de los Caballitos de Mar (Seahorse Valley) (seahorse)
+Dimensiones imagen:    3840x2160 (8294400 px)
+Plano Complejo:        X=[-0,750000, -0,732222], Y=[0,090000, 0,100000]
+Max. Iteraciones:      20000
+Estrategia elegida:    FixedTileSize (Baldosas) (Parametro = 64)
+
+[1/3] Ejecutando lÝnea base monohilo local (T_sec)...
+[LINEA BASE] Tiempo Secuencial (T_sec): 609680 ms (609,68 s)
+
+[2/3] Solicitando renderizado distribuido al cl·ster Master-Worker...
+
+[3/3] Validando integridad de los datos calculados...
+[VERIFICACION OK] El resultado distribuido es 100% idÚntico al secuencial.
+
+=================================================
+              RESULTADOS DEL BENCHMARK
+=================================================
+Tiempo Monolito (T_sec):      609680 ms (609,68 s)
+Tiempo Cl·ster (T_dist):      55543 ms (55,54 s)
+Aceleraci¾n (Speedup S):      10,98x
+Eficiencia Paralela (E):      548,8%
+=================================================
+[MandelbrotCore] Imagen guardada satisfactoriamente en: D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\client\output\c3.png
+
+BUILD SUCCESSFUL in 11m 9s
+5 actionable tasks: 2 executed, 3 up-to-date
+=== c4: mini 3840x2160 30000 iter, p=2 ===
+> Task :common:compileSlice
+> Task :common:compileJava UP-TO-DATE
+> Task :client:compileJava UP-TO-DATE
+> Task :client:processResources NO-SOURCE
+> Task :client:classes UP-TO-DATE
+> Task :common:processResources NO-SOURCE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar UP-TO-DATE
+
+> Task :client:runClient
+=================================================
+         CLIENTE DE BENCHMARK FRACTAL
+=================================================
+Conectado a Master:    MasterService:tcp -h 10.243.132.174 -p 10000
+Workers en el cl·ster: 2 nodo(s) activo(s)
+Preset / Regi¾n:       Mini-Mandelbrot Satelite (mini)
+Dimensiones imagen:    3840x2160 (8294400 px)
+Plano Complejo:        X=[-1,780000, -1,708889], Y=[-0,020000, 0,020000]
+Max. Iteraciones:      30000
+Estrategia elegida:    FixedTileSize (Baldosas) (Parametro = 64)
+
+[1/3] Ejecutando lÝnea base monohilo local (T_sec)...
+[LINEA BASE] Tiempo Secuencial (T_sec): 251087 ms (251,09 s)
+
+[2/3] Solicitando renderizado distribuido al cl·ster Master-Worker...
+
+[3/3] Validando integridad de los datos calculados...
+[VERIFICACION OK] El resultado distribuido es 100% idÚntico al secuencial.
+
+=================================================
+              RESULTADOS DEL BENCHMARK
+=================================================
+Tiempo Monolito (T_sec):      251087 ms (251,09 s)
+Tiempo Cl·ster (T_dist):      18671 ms (18,67 s)
+Aceleraci¾n (Speedup S):      13,45x
+Eficiencia Paralela (E):      672,4%
+=================================================
+[MandelbrotCore] Imagen guardada satisfactoriamente en: D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\client\output\c4.png
+
+BUILD SUCCESSFUL in 4m 34s
+5 actionable tasks: 2 executed, 3 up-to-date
+=== c5: elephant 3840x2160 30000 iter, p=2 ===
+> Task :common:compileSlice
+> Task :common:compileJava UP-TO-DATE
+> Task :client:compileJava UP-TO-DATE
+> Task :client:processResources NO-SOURCE
+> Task :client:classes UP-TO-DATE
+> Task :common:processResources NO-SOURCE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar UP-TO-DATE
+
+> Task :client:runClient
+=================================================
+         CLIENTE DE BENCHMARK FRACTAL
+=================================================
+Conectado a Master:    MasterService:tcp -h 10.243.132.174 -p 10000
+Workers en el cl·ster: 3 nodo(s) activo(s)
+Preset / Regi¾n:       Valle de los Elefantes (elephant)
+Dimensiones imagen:    3840x2160 (8294400 px)
+Plano Complejo:        X=[0,250000, 0,427778], Y=[-0,050000, 0,050000]
+Max. Iteraciones:      30000
+Estrategia elegida:    FixedTileSize (Baldosas) (Parametro = 64)
+
+[1/3] Ejecutando lÝnea base monohilo local (T_sec)...
+[LINEA BASE] Tiempo Secuencial (T_sec): 373125 ms (373,13 s)
+
+[2/3] Solicitando renderizado distribuido al cl·ster Master-Worker...
+
+[3/3] Validando integridad de los datos calculados...
+[VERIFICACION OK] El resultado distribuido es 100% idÚntico al secuencial.
+
+=================================================
+              RESULTADOS DEL BENCHMARK
+=================================================
+Tiempo Monolito (T_sec):      373125 ms (373,13 s)
+Tiempo Cl·ster (T_dist):      26926 ms (26,93 s)
+Aceleraci¾n (Speedup S):      13,86x
+Eficiencia Paralela (E):      461,9%
+=================================================
+[MandelbrotCore] Imagen guardada satisfactoriamente en: D:\Users\Isabella\Documents\CompuNet I - Taller 3\taller-evaluativo-fractales-master-worker\client\output\c5.png
+
+BUILD SUCCESSFUL in 6m 44s
+5 actionable tasks: 2 executed, 3 up-to-date
